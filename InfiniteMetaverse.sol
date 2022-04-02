@@ -15,8 +15,8 @@ F$$'....................~K$$$$}........................>$$K
 
    #InfiniteMetaverse
    #IFM
-   #1,000,000,000,000,000 total supply
-   #5,000,000,000,000 tokens limitation for trade
+   #10,000,000,000 total supply
+   #500,000,000 tokens limitation for trade
 
    
    Great features:
@@ -24,7 +24,7 @@ F$$'....................~K$$$$}........................>$$K
    2% fee auto distribute to all holders
    50% burn to the black hole, with such big black hole and 3% fee, the strong holder will get a valuable reward
 
-   Can you make #IFM 10000000X? 
+   Can you make #IFM 10000000000X? 
 
  */
 
@@ -722,13 +722,13 @@ contract InfiniteMetaverse is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1000000000 * 10**6 * 10**9;
+    uint256 private _tTotal = 10000000000 *  10**18;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
     string private _name = "Infinite Metaverse";
     string private _symbol = "IFM";
-    uint8 private _decimals = 9;
+    uint8 private _decimals = 18;
     
     uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
@@ -742,8 +742,8 @@ contract InfiniteMetaverse is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 5000000 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 500000 * 10**6 * 10**9;
+    uint256 public _maxTxAmount = 500000000 *  10**18;
+    uint256 private numTokensSellToAddToLiquidity = 50000000 * 10**18;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
